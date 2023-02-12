@@ -19,11 +19,11 @@ const Feed = () => {
   //
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await axios.get(`http://localhost:8080/posts/${query}`);
+      const response = await axios.get(`https://springappbackend-production.up.railway.app/posts/${query}`);
       setPost(response.data);
     };
     const fetchInitialPosts = async () => {
-        const response = await axios.get(`http://localhost:8080/allPosts`);
+        const response = await axios.get(`https://springappbackend-production.up.railway.app/allPosts`);
         console.log(response);
         setPost(response.data);
     }
